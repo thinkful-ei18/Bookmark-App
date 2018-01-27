@@ -1,0 +1,127 @@
+.container2 {
+    border: 1px solid #404040;
+    width:90%;
+    height:50px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.title {
+    position:relative;
+    top:30%;
+    font-size: 15px;
+    margin-left:5px;
+}
+.page-title {
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+}
+.add-bookmark{
+    position: relative;
+    top:30%;
+    height:20px;
+    left:350px;
+    font-size: 20px;
+}
+.checked {
+    color: gray;
+}
+.star {
+    font-size:20px;
+    position: relative;
+    top:30%;
+    left:100px;
+}
+.container1, .expand-container1{
+    margin-top:20px;
+}
+.expand-container2{
+    height:150px;
+    margin-left:auto;
+    margin-right: auto;
+    width:90%;
+    border: 1px solid #404040;
+}
+.add-bookmark-expand{
+    position: relative;
+    top:75%;
+    left:42.5%;
+
+}
+.star-expand{
+    font-size:20px;
+    position: relative;
+    top:50%;
+    left:57.5%;
+}
+.title-expand{
+    position:relative;
+    top:10%;
+    font-size: 15px;
+    margin-left:5px;
+}
+.description-expand{
+    font-size:10px;
+    top:40%;
+    right:66.5%;
+    position: relative;
+}
+.description-heading {
+    font-size:15px;
+    top:30%;
+    right:55%;
+    position: relative;
+    border-bottom: solid 1px #404040;
+
+}
+.link-expand{
+    position: relative;
+    left:70%;
+    top:10%;
+    display:inline;
+}
+.sub-container1{
+    margin-top:20px;
+}
+.sub-container2{
+    height:100px;
+    margin-left:auto;
+    margin-right: auto;
+    width:90%;
+    border: 1px solid #404040;
+}
+.add-bookmark-sub{
+    position: absolute;
+    top:21%;
+    left:80%;
+
+}
+.star-sub{
+    font-size:12px;
+    position: absolute;
+    top:17.5%;
+    left:80%;
+    width:90px;
+}
+.title-sub{
+    position:absolute;
+    top:11%;
+    left:7%;
+    width:42%;
+}
+.description-sub{
+    font-size:10px;
+    top:14.2%;
+    left:7%;
+    height:8%;
+    position: absolute;
+    width:70%;
+}
+
+.link-sub{
+    top:11%;
+    right:7%;
+    width:42%;
+    position: absolute;
+}
