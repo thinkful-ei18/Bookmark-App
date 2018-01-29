@@ -86,24 +86,24 @@ const bookList = (function(){
       const BookListItemsString = generateBookItemString(items);
 
       $('.container1').html(BookListItemsString);
-      handleNewItemSubmit();
     }
   function handleNewItemSubmit(){
-      $('.sub-container2').submit(function(event){
+      $('.add-button').click(function(event){
         event.preventDefault();
         console.log('newItemSubmit ran!');
         const newItemTitle = $('.title-sub').val();
         const newItemURL = $('.link-sub').val();
         const newRating = $('.star-sub').val();
-        const newDescription = $('description-sub').val();
+        const newDescription = $('.desc-sub').val();
+        console.log(newDescription);
+        const curItem = item.create(newItemTitle,newItemURL,newDescription,newRating);
+        console.log(curItem);
         $('description-sub').val('');
         $('.star-sub').val('');
         $('.link-sub').val('');
         $('.title-sub').val('');
-        
-        api.createItem(newItemTitle, newDescription, newItemURL, newRating, (newItem)=>
+        api.createItem(curItem, (newItem)=>
       {
-          console.log(newItem);
           store.addItem(newItem);
           render();
         });
@@ -112,16 +112,15 @@ const bookList = (function(){
 
 
 
-    }
+  }
 
 
   return {
+    handleNewItemSubmit,
     generateItemElementCon,
     generateItemElementExp,
     starItem,
-    render,
-    handleNewItemSubmit
-
+    render
 
   };
 }());

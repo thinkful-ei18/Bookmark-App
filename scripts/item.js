@@ -11,12 +11,13 @@ const item = (function () {
     }
   };
   const create = function(title, link, description, rating){
+    console.log('create ran');
     return {
       id: cuid(),
-      title,
-      link,
-      description,
-      rating
+      title: title,
+      url: link,
+      desc: description,
+      rating : rating
     };
   };
 

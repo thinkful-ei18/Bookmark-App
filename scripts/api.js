@@ -9,7 +9,8 @@ const api = (function(){
     console.log('get items ran');
 }
   function createItem(itemData, callback){
-  	const newItem = JSON.stringify({itemData});
+    const newItem = JSON.stringify({itemData});
+    console.log(newItem);
   	$.ajax({
     url: `${BASE_URL}/bookmarks`,
     method: 'POST',
@@ -18,9 +19,9 @@ const api = (function(){
     success: callback
   });
 }
+
   return {
 		createItem,
 		getItems
-
-	};
+  };
 }());

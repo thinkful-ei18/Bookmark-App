@@ -23,7 +23,7 @@ const store = (function () {
     return {
         items: [],
 
-        addItem,
+      addItem,
         findById,
         addItem,
         findAndDelete,
