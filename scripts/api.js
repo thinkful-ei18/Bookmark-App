@@ -1,7 +1,7 @@
 /* global store, api, index, bookList */
 'use strict';
 
-const BASE_URL = 'https://thinkful-list-api.herokuapp.com/[Mo-Bookmark]';
+const BASE_URL = 'https://thinkful-list-api.herokuapp.com/Mo';
 const api = (function(){
 
   function getItems(callback){
@@ -9,8 +9,7 @@ const api = (function(){
     console.log('get items ran');
 }
   function createItem(itemData, callback){
-    const newItem = JSON.stringify({itemData});
-    console.log(newItem);
+    const newItem = JSON.stringify(itemData);
   	$.ajax({
     url: `${BASE_URL}/bookmarks`,
     method: 'POST',
