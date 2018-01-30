@@ -2,7 +2,7 @@
 'use strict';
 
 $(document).ready(function() {
-    bookList.handleNewItemSubmit();
+    bookList.bindEventListeners();
     bookList.render();
   
     api.getItems((items) => {

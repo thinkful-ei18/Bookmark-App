@@ -1,9 +1,11 @@
 .container2 {
+    position: relative;
     border: 1px solid #404040;
     width:90%;
     height:50px;
     margin-left:auto;
     margin-right: auto;
+    overflow:auto;
 }
 .title {
     position:relative;
@@ -17,21 +19,21 @@
     margin-right: auto;
     text-align: center;
 }
-.add-bookmark{
-    position: relative;
+.expand-button{
+    position:absolute;
     top:30%;
-    height:20px;
-    left:350px;
+    height:50%;
+    left:80%;
     font-size: 20px;
 }
 .checked {
     color: gray;
 }
 .star {
-    font-size:20px;
+    font-size:10px;
     position: relative;
     top:30%;
-    left:100px;
+    left:10%;
 }
 .container1, .expand-container1{
     margin-top:20px;
