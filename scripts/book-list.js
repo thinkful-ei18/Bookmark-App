@@ -7,14 +7,13 @@ const bookList = (function(){
     let version = 1;
     let starItemVar = starItem(item,version);
 
-    return `<div class ="container1">
+    return `<li class = "li-mark"><div class ="container1">
       <div class ="container2">
       <span class ="title">${item.title}</span>
       ${starItemVar}
-
-      <span class = "expand-button"><button class ="expandBtn type="button">Expand Mark</button></span>
+      <span class = "delete-button"><button class ="dltBtn" type="button">Delete Mark</button></span>
       </div>
-  </div> `;
+  </div></li> `;
 
   }
   function generateItemElementExp(item){
@@ -84,6 +83,7 @@ const bookList = (function(){
    
   function generateBookItemString(bookList){
     const items = bookList.map((item) => generateItemElementCon(item));
+    console.log(items);
     return items.join(' ');
   }
   function render(){
@@ -91,7 +91,7 @@ const bookList = (function(){
     let items = store.items;
     const BookListItemsString = generateBookItemString(items);
 
-    $('.container1').html(BookListItemsString);
+    $('.ul-mark').append(BookListItemsString);
   }
   function handleNewItemSubmit(){
     $('.add-button').click(function(event){
@@ -124,9 +124,18 @@ const bookList = (function(){
 
     }
 
+    function handleDeleteItem(){
+      $('ul').on('click','li',(event)=>{
+        event.preventDefault();
+       console.log('Delete Button clicked');
+
+      });
+    }
+
     function bindEventListeners(){
       handleNewItemSubmit();
       handleExpandItem();
+      handleDeleteItem();
     }
 
 
