@@ -7,7 +7,7 @@ const bookList = (function(){
     let version = 1;
     let starItemVar = starItem(item,version);
 
-    return `<li class = "li-mark"><div class ="container1">
+    return `<li class = "li-mark" data-item-id="${item.id}"><div class ="container1">
       <div class ="container2">
       <span class ="title">${item.title}</span>
       ${starItemVar}
@@ -127,7 +127,12 @@ const bookList = (function(){
     function handleDeleteItem(){
       $('ul').on('click','li',(event)=>{
         event.preventDefault();
-       console.log('Delete Button clicked');
+       const id = $(event.currentTarget).closest('.li-mark').data('item-id');
+       console.log(id);
+       api.deleteItem(id, ()=>{
+        store.findAndDelete(id);
+        render(); 
+       });
 
       });
     }
