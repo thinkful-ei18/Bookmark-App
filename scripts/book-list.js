@@ -12,12 +12,13 @@ const bookList = (function(){
       <span class ="title">${item.title}</span>
       ${starItemVar}
       <span class = "delete-button"><button class ="dltBtn" type="button">Delete Mark</button></span>
+      <span class = "expand-button"><button class ="expBtn" type="button">Expand</button></span>
       </div>
   </div></li> `;
 
   }
   function generateItemElementExp(item){
-    let verison = 2;
+    let version = 2;
     let starItemVar = starItem(item, version);
     return `<div class ="expand-container1">
       <div class ="expand-container2">
@@ -83,15 +84,21 @@ const bookList = (function(){
    
   function generateBookItemString(bookList){
     const items = bookList.map((item) => generateItemElementCon(item));
-    console.log(items);
+    console.log(bookList);
     return items.join(' ');
   }
+  // function generateBookItemStringExp(bookList, id){
+    
+  //   if (item.id === id){
+  //   const item = bookList.map(item) => generateItemElementExp(item));
+  //   }
+  // }
   function render(){
     console.log('render ran');
     let items = store.items;
     const BookListItemsString = generateBookItemString(items);
 
-    $('.ul-mark').append(BookListItemsString);
+    $('.ul-mark').html(BookListItemsString);
   }
   function handleNewItemSubmit(){
     $('.add-button').click(function(event){
@@ -103,10 +110,9 @@ const bookList = (function(){
       const newDescription = $('.desc-sub').val();
       const curItem = item.create(newItemTitle,newItemURL,newDescription,newRating);
       console.log(curItem);
-      $('description-sub').val('');
-      $('.star-sub').val('');
-      $('.link-sub').val('');
-      $('.title-sub').val('');
+      $('description-sub').val('Description');
+      $('.link-sub').val('Link To Page');
+      $('.title-sub').val('Title');
       api.createItem(curItem, (newItem)=>
       {
         store.addItem(newItem);
@@ -116,16 +122,28 @@ const bookList = (function(){
   }
 
     function handleExpandItem(){
-      $('.expandBtn').click(function(event){
+      $('ul').on('click','li .expBtn' ,function(event){
         event.preventDefault();
-        console.log('expand cicked');
+        console.log('expand clicked');
+        const id = $(event.currentTarget).closest('.li-mark').data('item-id');
+
+        api.getItems((item)=>{
+          const result = item.filter(item => item.id === id); 
+          const expandedVersion= generateItemElementExp(result);
+          $(event.currentTarget).closest('.li-mark').html(expandedVersion);
+
+
+
+        });
+
+        
 
       });
 
     }
 
     function handleDeleteItem(){
-      $('ul').on('click','li',(event)=>{
+      $('ul').on('click','li .dltBtn',(event)=>{
         event.preventDefault();
        const id = $(event.currentTarget).closest('.li-mark').data('item-id');
        console.log(id);
