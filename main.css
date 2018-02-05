@@ -9,7 +9,7 @@
 }
 .title {
     position:relative;
-    top:30%;
+    top:40%;
     font-size: 15px;
     margin-left:5px;
 }
@@ -29,6 +29,12 @@
 .checked {
     color: gray;
 }
+.expBtn{
+    position: relative;
+    left:45%;
+    top:39%;
+
+}
 .star {
     font-size:10px;
     position: relative;
@@ -40,22 +46,29 @@
 }
 .expand-container2{
     height:150px;
+    left:5%;
     margin-left:auto;
     margin-right: auto;
     width:90%;
     border: 1px solid #404040;
+    position: realtive;
 }
 .add-bookmark-expand{
-    position: relative;
-    top:75%;
-    left:42.5%;
+    position:relative;
+    left:68%;
+    top:80%;
 
 }
-.star-expand{
-    font-size:20px;
+.expStar{
+    font-size:15px;
     position: relative;
-    top:50%;
-    left:57.5%;
+    left:67%;
+    top:20%;
+}
+.delete-button-exp{
+    position:relative;
+    top:65%;
+    left:52.5%;
 }
 .title-expand{
     position:relative;
@@ -66,13 +79,13 @@
 .description-expand{
     font-size:10px;
     top:40%;
-    right:66.5%;
+    left:-35%;
     position: relative;
 }
 .description-heading {
     font-size:15px;
     top:30%;
-    right:55%;
+    left:-29%;
     position: relative;
     border-bottom: solid 1px #404040;
 
@@ -131,6 +144,6 @@ ul{
     list-style: none;
     padding-left:0;
 }
-.item-id{
+.item-id .item-title .item-url .item-desc .item-star{
     display:none;
 }
