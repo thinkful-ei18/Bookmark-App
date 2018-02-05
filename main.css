@@ -1,4 +1,8 @@
-.container2 {
+@media screen and (min-width:1050px){
+    .small-screen{
+        display:none;
+    }
+    .container2 {
     position: relative;
     border: 1px solid #404040;
     width:90%;
@@ -147,3 +151,11 @@ ul{
 .item-id .item-title .item-url .item-desc .item-star{
     display:none;
 }
+}
+@media screen and (max-width:1049px){
+    .body-wrap{
+        display:none;
+    }
+
+}
+
