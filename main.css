@@ -5,7 +5,7 @@
     .container2 {
     position: relative;
     border: 1px solid #404040;
-    width:90%;
+    width:95%;
     height:50px;
     margin-left:auto;
     margin-right: auto;
@@ -53,7 +53,7 @@
     left:5%;
     margin-left:auto;
     margin-right: auto;
-    width:90%;
+    width:95%;
     border: 1px solid #404040;
     position: realtive;
 }
@@ -81,12 +81,19 @@
     margin-left:5px;
 }
 .description-expand{
-    font-size:15px;
+    font-size:12px;
     top:40%;
-    left:-35%;
+    left:-42.5%;
     position: relative;
 }
+.description-heading {
+    font-size:15px;
+    top:30%;
+    left:-29%;
+    position: relative;
+    border-bottom: solid 1px #404040;
 
+}
 .link-expand{
     position: relative;
     left:70%;
@@ -97,10 +104,10 @@
     margin-top:20px;
 }
 .sub-container2{
-    height:120px;
+    height:100px;
     margin-left:auto;
     margin-right: auto;
-    width:90%;
+    width:95%;
     border: 1px solid #404040;
 }
 .add-bookmark-sub{
