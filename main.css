@@ -81,19 +81,12 @@
     margin-left:5px;
 }
 .description-expand{
-    font-size:10px;
+    font-size:15px;
     top:40%;
     left:-35%;
     position: relative;
 }
-.description-heading {
-    font-size:15px;
-    top:30%;
-    left:-29%;
-    position: relative;
-    border-bottom: solid 1px #404040;
 
-}
 .link-expand{
     position: relative;
     left:70%;

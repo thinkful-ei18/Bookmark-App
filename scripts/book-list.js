@@ -26,7 +26,6 @@ const bookList = (function(){
       <a class ="link-expand" href="">${url}</a>
       <span class ="expStar">${starItemVar}</span>
       <span class = "add-bookmark-expand"><button type="button" class="conBtn">Condense Mark</button></span>
-      <span class="description-heading">Description</span>
       <span class = "delete-button-exp"><button class ="dltBtn" type="button">Delete Mark</button></span>
       <span class="description-expand" >${desc}</span>
       </div>
