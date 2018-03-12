@@ -144,6 +144,13 @@
     width:42%;
     position: absolute;
 }
+.Filter{
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    top:5px;
+}
 ul{
     list-style: none;
     padding-left:0;
