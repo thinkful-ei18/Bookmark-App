@@ -23,7 +23,7 @@ const bookList = (function(){
     return `<div class ="expand-container1">
       <div class ="expand-container2">
       <span class ="title-expand">${title}</span>
-      <a class ="link-expand" href="">${url}</a>
+      <a class ="link-expand" href="${url}">Link To Page</a>
       <span class ="expStar">${starItemVar}</span>
       <span class = "add-bookmark-expand"><button type="button" class="conBtn">Condense Mark</button></span>
       <span class="description-heading">Description</span>
