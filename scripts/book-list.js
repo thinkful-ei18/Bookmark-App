@@ -51,7 +51,7 @@ const bookList = (function(){
         starItem  = '<span value="4" class="fa fa-star star star1 checked"></span> <span class="fa fa-star star checked"></span> <span class="fa fa-star star checked"></span> <span class="fa fa-star star checked"></span> <span class="fa fa-star star"></span>';
       }
       else if (item === 5) {
-        starItem  = '<span value="5" class="fa fa-star star star1 checked"></span> <span class="fa fa-star star checked"></span> <span class="fa fa-star star checked"></span> <span class="fa fa-star star"></span> <span class="fa fa-star star checked"></span>';
+        starItem  = '<span value="5" class="fa fa-star star star1 checked"></span> <span class="fa fa-star star checked"></span> <span class="fa fa-star star checked"></span> <span class="fa fa-star star checked"></span> <span class="fa fa-star star checked"></span>';
       }
       else{
         starItem = '<span value="0" class="fa fa-star star star1"></span> <span class="fa fa-star star"></span> <span class="fa fa-star star"></span> <span class="fa fa-star star"></span> <span class="fa fa-star star"></span>';
