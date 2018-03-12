@@ -96,7 +96,13 @@ const bookList = (function(){
   // }
   function render(){
     console.log('render ran');
-    let items = store.items;
+    let items;
+    if($('.star-filter').val() > 0){
+      items = store.items.filter(item=>item.rating == $('.star-filter').val());
+      }
+      else{
+    items = store.items;
+      }
     const BookListItemsString = generateBookItemString(items);
 
     $('.ul-mark').html(BookListItemsString);
@@ -190,12 +196,21 @@ const bookList = (function(){
 
       });
     }
+    function handleFilterItem(){
+      $('.Filter').on('click', '.filter-btn', (event)=>{
+
+        event.preventDefault();
+        render();
+        
+      });
+    }
 
     function bindEventListeners(){
       handleNewItemSubmit();
       handleExpandItem();
       handleDeleteItem();
       handleCondensedItem();
+      handleFilterItem();
     }
 
 

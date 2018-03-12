@@ -81,7 +81,7 @@
     margin-left:5px;
 }
 .description-expand{
-    font-size:10px;
+    font-size:12px;
     top:40%;
     left:-42.5%;
     position: relative;
@@ -143,6 +143,13 @@
     right:7%;
     width:42%;
     position: absolute;
+}
+.Filter{
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    top:5px;
 }
 ul{
     list-style: none;
